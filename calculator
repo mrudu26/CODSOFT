@@ -1,1 +1,65 @@
+def add(x, y):
+    return x + y
+
+def subtract(x, y):
+    return x - y
+
+def multiply(x, y):
+    return x * y
+
+def divide(x, y):
+    if y != 0:
+        return x / y
+    else:
+        return "Error: Division by zero"
+def power(x, y):
+    return x ** y
+
+def mod(x, y):
+    return x % y
+
+def absolute(x, y):
+    return (abs(x), abs(y))
+
+#while True:
+print("Options:")
+print("Enter '+' for addition")
+print("Enter '-' for subtraction")
+print("Enter '*' for multiplication")
+print("Enter '/' for division")
+print("Enter '**' for exponent")
+print("Enter '%' to find modulus(remainder) ")
+print("Enter 'abs' for absolute value ")
+print("Enter 'X' to end the program")
+user_input = input(": ")
+
+if user_input in ("+", "-", "*", "/","**", "%","abs"):
+    num1 = float(input("Enter first number: "))
+    num2 = float(input("Enter second number: "))
+
+    if user_input == "+":
+        print("Result:", add(num1, num2))
+    elif user_input == "-":
+        print("Result:", subtract(num1, num2))
+    elif user_input == "*":
+        print("Result:", multiply(num1, num2))
+    elif user_input == "/":
+        print("Result:", divide(num1, num2))
+    elif user_input == "**":
+        print("Result:", exponent(num1, num2))
+    elif user_input == "%":
+        print("Result:", mod(num1, num2))
+    elif user_input == "abs":
+        print("Result:", absolute(num1, num2))
+
+exit_loop = False
+
+while not exit_loop:
+    if user_input.upper() == "X":
+        exit_loop = True
+    else:
+        print("Invalid input")
+
+
+
 
